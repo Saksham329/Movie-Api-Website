@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./movies.css">
+</head>
+<body>
+    <%- include("header.ejs") %>
+    <div class="actioncontainer">
+        
+        <div class="carousel_inner"> 
+            <%Movies.forEach(movies=>{%>
+                <div class="carousel_item">
+                    <div class="carousel_img">
+                        <% if (movies.poster_path) { %>
+                            <img src="https://image.tmdb.org/t/p/w500<%= movies.poster_path %>" alt="<%= movies.title %> poster">
+                            <% } else { %>
+                                <p>No poster available</p>
+                            <% } %>
+                    </div>
+                    <div class="overview">
+                        <p><%=movies.overview.substring(0,400)%></p>
+                    </div>
+                        <div class="content">
+                            <%if (movies.title){%>
+                                <h6><%=movies.title%></h6>
+                                <%} else { %>
+                                <p>No poster available</p>
+                            <% } %>
+                            <div class="voteAvg">
+                                <%if (movies.vote_average){%>
+                                    <button type="button" class="<%= movies.vote_average >= 7 ? 'high-vote' : movies.vote_average >= 5 ? 'medium-vote' : 'low-vote' %>"><%=movies.vote_average%></button>
+                                    <%} else { %>
+                                        <button type="button" class="votebtn">7.25</button>
+                                <% } %>
+                            </div>    
+                        </div>            
+                            
+                </div>        
+            <%})%>
+        </div> 
+
+
+    </div>
+
+    <%- include("footer.ejs") %>
+</body>
+</html>

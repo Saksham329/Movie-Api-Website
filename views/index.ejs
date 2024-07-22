@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <%- include("header.ejs") %>
+
+    <div class="container">
+         <div class="content">
+            <h2>MovieFlix</h2>
+            <form method="post" action="/search">
+                <input type="text" name="query" placeholder="Search Movie...">
+                <button class="searchbutton" type="submit"><i class=" search_logo fas fa-search search-icon"></i></button>
+            </form>
+            <p>Welcome to MovieFlix, your go-to destination for discovering movies! Use our intuitive search bar to explore a vast database of films, find detailed information about your favorite movies, read summaries, and discover new releases. Whether you're looking for the latest blockbusters or hidden gems, MovieFlix has you covered.</p>
+             <button class="moviebtn"><a href="./movies">Watch Movies</a></button>
+        </div>
+        <div class="image">
+            <img src="./anw-min.webp" alt="logoimage">
+        </div>
+    </div>
+    <%- include("footer.ejs") %>
+</body>
+</html>

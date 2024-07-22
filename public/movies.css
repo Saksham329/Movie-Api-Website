@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h2{
+    color:whitesmoke;
+    margin-left: 10px;
+}
+.actioncontainer{
+    position: relative;
+            margin: auto;
+            overflow: hidden;
+}
+.carousel_inner{
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: wrap;
+    overflow-x: scroll
+}
+.carousel_img{
+    display: flex;
+    width: 220px;
+}
+.carousel_item img{
+    width:220px;
+    height: auto;
+    border: 1px solid white;
+    background: cover;
+    position: relative;
+}
+.carousel_item h6{
+    color:whitesmoke;
+    overflow: hidden   
+}
+
+.carousel_item {
+    display: flex;
+    width:300px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    border:1px solid white;
+    align-items: center;
+    width: 220px;
+    justify-content: space-between;
+    height: 30px;
+    margin-bottom: 20px;
+    padding:0px 10px
+}
+.content p{
+    font-size: 10px;
+}
+
+.overview{
+    position: absolute;
+    font-size: 13px;
+    width: 220px;
+    height:220px;
+    margin-top: 57px;
+    background-color: #5c5b5b;
+    transform: translateY(151%);
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 3px;
+    padding-top: 10px;
+}
+.carousel_item:hover .overview {
+    transform: translateY(0);
+}
+.votebtn{
+    background-color: rgb(226, 236, 236);
+    padding:3px;
+}
+.high-vote{
+    background-color: green;
+    color: white;
+    padding: 2px;
+    border-radius: 3px;
+}
+.medium-vote{
+    background-color: orangered;
+    color: white;
+    padding: 2px;
+    border-radius: 3px;
+}
+button a {
+    text-decoration: none;
+    
+}
